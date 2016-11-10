@@ -1,0 +1,261 @@
+                        /**************************************************
+Fonts
+
+
+Font Scaling
+6.854rem (min-width:800px h1)
+4.236rem (h1 default, min-width:800px h2)
+2.618rem (h2 default, )
+1.618rem (min-width:800p p )
+1.0rem (li, p, 1 default )
+0.618rem ( )
+
+
+**************************************************/
+            
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans|PT+Serif');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    
+    background-color: lightslategray;
+}
+/*************************** 
+DEFAULTS - MOBILE FIRST 
+***************************/
+
+h1 {
+    background: url(http://loremflickr.com/1200/400/mountains/all);
+    background-position: center;
+    
+    font: bold 4.236rem 'PT Serif', 'Times New Roman', serif;
+    -webkit-text-stroke: 1px black;
+    color: white;
+    text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+    text-align: center;
+  
+    padding: 20px;
+    margin: 10px 5px;
+    
+}
+
+h2 {
+    font: bold 2.618rem 'PT Serif', 'Times New Roman', serif;
+    text-align: center;
+    
+    margin: 5px auto;
+    border: 2px solid #ffffff;
+   
+}
+
+p:nth-child(1n+2) {
+    text-indent: 2rem;
+    
+}
+
+li,
+p,
+a {
+    display: inline-block;
+    
+    font: bold 1rem 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+    list-style: none;
+    text-decoration: none; 
+}
+
+pre,
+code,
+kbd {
+    font: normal 1.0rem 'PT Serif', 'Times New Roman', serif;
+}
+
+img {
+    display: inline-block;
+    transform: translateX(-2rem);
+}
+
+
+/***************************
+    LAYOUT - MOBILE FIRST
+***************************/
+
+.wrapper {
+    width: 95%;
+    margin: 0 auto;
+    
+}
+
+header {
+    width: 100%;
+    margin: 0 auto;
+}
+
+nav {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+nav>ul {
+    display: inline-block;
+    width: 100%;
+}
+
+nav li {
+    width: 100%;
+}
+
+nav a,
+nav a:link,
+nav a:visited {
+    display: block;
+    
+    font: bold 1.618rem 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+    border: 3px solid #ffffff;
+    margin: 1px auto;
+/*    background-color: #E9E581;*/
+}
+
+nav a:active,
+nav a:focus,
+nav a:hover {
+    color: #ffffff;
+    
+}
+
+main {
+    width: 100%;
+}
+
+.col {
+    float: none;
+    width: 100%;
+}
+
+.col img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+}
+
+
+
+/***************************************MIN WIDTH 600PX*****************************************/
+
+
+@media screen and (min-width:600px) {
+    img {
+        transform: translateX(0);
+    }
+    wrapper {
+        width: 100%;
+    }
+    nav {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+    }
+    nav li {
+        width: 20%;
+        float: left;
+    }
+    main {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .col {
+        width: 50%;
+        display: inline-block;
+        float: left;
+        padding: 0 2%;
+    }
+    .col img {
+        width: 60%;
+        display: inline;
+        float: left;
+        padding-right: 1px;
+    }
+    footer {
+        width: 90%;
+        display: block;
+        position: relative;
+/*
+        margin-top: -180px;
+        height: 180px;
+*/
+        clear: both;
+    }
+}
+
+
+/******************MIN WIDTH 800PX************************/
+
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 6.854rem;
+    }
+    h2 {
+        font-size: 4.236rem;
+    }
+    p {
+        font-size: 1.618rem;
+    }
+    .col img {
+        width: 50%;
+    }
+    footer {
+        width: 100%;
+    }
+}
+
+
+/*MIN WIDTH 1200PX **************************************/
+
+
+@media screen and (min-width: 1200px) {
+    nav {
+        display: inline-block;  
+        width: 30%;   
+        float: left;
+    }
+    nav a,
+    nav a:link,
+    nav a:visited {
+        display: block;
+        font: bold 2.618rem 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+        border: 3px solid #ffffff;
+        margin: 2px auto;
+
+    }
+    nav li {
+        width: 100%;
+    }
+    main {
+        width: 70%;
+        display: inline-block;
+        float: left;
+    }
+    .col img {
+        width: 55%;
+    }
+    footer {
+        width: 100%;
+    }
+}
+
+
+
+
